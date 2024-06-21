@@ -1,6 +1,17 @@
 {
-  "name": "IKUN",
-  "lockfileVersion": 3,
-  "requires": true,
-  "packages": {}
+  "name": "ikun",
+  "version": "1.0.0",
+  "description": "IKUN website",
+  "scripts": {
+    "start": "firebase serve",     
+    "deploy": "firebase deploy", 
+    "deploy:functions": "firebase deploy --only functions",  
+    "deploy:firestore": "firebase deploy --only firestore"
+  },
+  "author": "Kun ge",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
 }
