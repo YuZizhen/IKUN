@@ -57,14 +57,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = form.name.value;
         const email = form.email.value;
         const message = form.message.value;
+        const submissionTime = new Date(); // Get the current date and time
 
-        console.log('Form data:', { name, email, message }); // Log form data for debugging
+        console.log('Form data:', { name, email, message, submissionTime }); // Log form data for debugging
 
         // Add a new document with a generated id to the Firestore collection "contacts"
         db.collection('contacts').add({
             name: name,
             email: email,
-            message: message
+            message: message,
+            submissionTime: submissionTime
         })
         .then(function(docRef) {
             console.log('Document written with ID: ', docRef.id);
